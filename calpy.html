@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+
+    <form method="post" action="{% url 'calculate' %}">
+        {% csrf_token %}
+        
+        <label for="num1">Number 1:</label>
+        <input type="number" name="num1" id="num1" required>
+
+        <label for="num2">Number 2:</label>
+        <input type="number" name="num2" id="num2" required>
+
+        <label for="operation">Operation:</label>
+        <select name="operation" id="operation" required>
+            <option value="addition">Addition (+)</option>
+            <option value="subtraction">Subtraction (-)</option>
+            <option value="multiplication">Multiplication (*)</option>
+            <option value="division">Division (/)</option>
+        </select>
+
+        <input type="submit" value="Calculate">
+    </form>
+
+    {% if result %}
+        <h2>Result: {{ result }}</h2>
+    {% endif %}
+</body>
+</html>
