@@ -1,0 +1,23 @@
+ /* Add any additional styling here */
+
+ .footer {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+    }
+
+    .logo {
+    width: 100px; /* Adjust the width as per your logo size */
+    }
+
+    .contact-details p {
+    margin-bottom: 5px;
+    }
+
+    /* Make the footer text center-aligned for small screens */
+    @media (max-width: 767px) {
+    .footer {
+        text-align: center;
+    }
+    }
+    
